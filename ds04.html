@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="ds04.css">
+        
 </head>
 <body>
 
@@ -71,7 +72,7 @@
         <div class="campo-grupo">
           <div class="campo">
             <label for="logradouro">Logradouro</label>
-            <input type="text" id="logradouro" name="logradouro" required="">
+            <input type="text" id="logradouro" name="logradouro" readonly>
           </div>
           <div class="campo">
             <label for="numero">Número</label>
@@ -86,7 +87,7 @@
           </div>
           <div class="campo">
             <label for="bairro">Bairro</label>
-            <input type="text" id="bairro" name="bairro" required="">
+            <input type="text" id="bairro" name="bairro" readonly>
           </div>
         </div>
   
@@ -94,15 +95,15 @@
         <div class="campo-grupo2">
             <div class="campo">
               <label for="cidade">Cidade</label>
-              <input type="text" id="cidade" name="cidade" required="">
+              <input type="text" id="cidade" name="cidade" readonly>
             </div>
             <div class="campo">
               <label for="estado">Estado</label>
-              <input type="text" id="estado" name="estado" required="">
+              <input type="text" id="estado" name="estado" readonly>
             </div>
             <div class="campo">
                 <label for="ibge">Código IBGE</label>
-                <input type="text" id="ibge" maxlength="7" size="7" name="ibge" required="">
+                <input type="text" id="ibge" maxlength="7" size="7" name="ibge" readonly>
             </div>
           </div>
           
@@ -123,6 +124,22 @@
                 <option value="4ano">4º ano</option>
                 <option value="5ano">5º ano</option>
               </select>
+
+            <div id="bloco-segunda-lingua">
+                <p>Segunda Língua</p>
+                <div class="opcao-lingua">
+                    <input type="radio" id="lingua_ingles" name="segunda-lingua" value="ingles">
+                    <span class="flag">US</span>
+                    <label for="lingua_ingles">Inglês</label>
+                </div>
+
+                <div class="opcao-lingua">
+                    <input type="radio" id="lingua_espanhol" name="segunda-lingua" value="espanhol">
+                    <span class="flag">ES</span>
+                    <label for="lingua_espanhol">Espanhol</label>
+                </div>
+            </div>
+
             </td>
   
             <td>
@@ -131,6 +148,11 @@
               <label for="manha">Manhã</label><br>
               <input type="radio" name="turno" id="tarde" value="tarde">
               <label for="tarde">Tarde</label>
+
+              <div id="bloco-telefone-tarde">
+                <p>Telefone de Contato para o Turno da Tarde</p>
+                <input type="text" id="telefone_tarde" name="telefone_tarde" placeholder="(61) 9 9999-9999">
+              </div>
             </td>
   
             <td>
@@ -163,6 +185,6 @@
       </div>
   
     </form>
-  
+    <script src="ds04.js"></script>
   
 </body></html>
