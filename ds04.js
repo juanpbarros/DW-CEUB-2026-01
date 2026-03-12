@@ -12,3 +12,17 @@ selectSerie.addEventListener('change', function(){
         radiosLingua.forEach(r => r.checked = false);
     }
 })
+
+
+const selectTurno = document.getElementsByName('turno');
+const blocoTurno = document.getElementById('bloco-telefone-tarde');
+
+selectTurno.forEach(radio => {
+    radio.addEventListener('change', function(){
+        if(this.value === 'tarde'){
+            blocoTurno.style.display = 'block';
+        }else{
+            blocoTurno.style.display = 'none';
+        }
+    })
+})
